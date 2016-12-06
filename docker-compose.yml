@@ -1,0 +1,14 @@
+version: '2'
+services: 
+ mongo:
+  build: ./mongo
+  volumes: 
+   - /data/db/mongo
+ raveinstant: 
+  build: ./app
+  links: 
+   - mongo
+  volumes:
+   - ./:/app
+  ports: 
+  - "3000:3000"
