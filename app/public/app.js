@@ -9,15 +9,12 @@
 	Config.$inject = ['$locationProvider'];
 
 	function Config($locationProvider){
-
 		$locationProvider.hashPrefix('!');
 	}
 
 	if (window.location.hash === '#_=_'){
 		window.location.hash = '#!';
-
 	}
-
 
 	//bootstrap angular
 
@@ -26,6 +23,6 @@
 		angular.bootstrap(document, ['raveinstant']);
 
 	});
-	
+
 
 })();
