@@ -2,18 +2,12 @@
   'use strict';
 
 
-
   angular.module('raveinstant').controller('mainController', mainController);
 
-  mainController.$inject = [
-                        '$scope',
-                        'ngCart',
-                        '$http'
-                    ];
+  mainController.$inject = [ '$scope', '$http', 'ngCart' ];
 
-  function mainController($scope, ngCart, $http){
-
-    
+  function mainController( $scope, $http, ngCart){
+      console.log(' in controller ');
 
   }
 

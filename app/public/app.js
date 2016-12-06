@@ -2,7 +2,7 @@
 
 	'user strict';
 
-	var dependencies = [ 'ngRoute' ];
+	var dependencies = [ 'ngRoute', 'ngCart'];
 
 	angular.module('raveinstant', dependencies).config(Config);
 

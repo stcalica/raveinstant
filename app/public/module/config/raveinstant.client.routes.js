@@ -1,5 +1,5 @@
 (function(){
-	
+
 	'use strict';
 
 
@@ -8,11 +8,10 @@
 	Config.$inject = [ '$routeProvider' ];
 
 	function Config($routeProvider){
-		
+
 		$routeProvider.when('/', {
-				templateUrl: 'module/views/index.html',
-				controller: 'mainController',
-				controllerAs: 'main'
+				templateUrl: 'module/views/raveinstant.client.index.html',
+				controller: 'mainController'
 			});
 
 	}
