@@ -3,34 +3,29 @@
   <head>
     <title><%= title %></title>
     <link rel='stylesheet' href='/libraries/bootstrap/dist/css/bootstrap.min.css' />
+    <link rel='stylesheet' href='/libraries/angular-bootstrap/ui-bootstrap-csp.css' />
     <link rel='stylesheet' href='/stylesheets/style.css' />
   </head>
   <body>
-    <div class="navbar">
-          <div class="col-md-8"></div>
-          <div class="col-md-4">
-        <ngcart-summary template-url="/libraries/ngCart/template/ngCart/summary.html"></ngcart-summary>
-      </div>
-    </div>
-    <h1><%= title %></h1>
-    <p>Hi! We are still underconstruction. </p>
 
-    <p> Welcome, we are Rave Instant. Rather than waiting anxiously for a package to arrive on time for the show we deliver directly to you at the venue or festival.  Please consider checking us out once we are all set up.</p>
-
-    <section ng-view></section>
+    <%- include navigation.ejs %>
+    <%- include body.ejs %>
+    <%- include footer.ejs %>
 
   </body>
 
-  <script type="text/javascript" src="/libraries/jquery/dist/jquery.min.js"></script>
-  <script type="text/javascript" src="/libraries/bootstrap/dist/js/bootstrap.min.js"></script>
-
+  <!-- third party requirements  -->
   <script type="text/javascript" src="/libraries/angular/angular.min.js"></script>
+  <script type="text/javascript" src="/libraries/angular-bootstrap/ui-bootstrap.min.js"></script>
+  <script type="text/javascript" src="/libraries/angular-bootstrap/ui-bootstrap-tpls.min.js"></script>
   <script type="text/javascript" src="/libraries/angular-route/angular-route.min.js"></script>
   <script type="text/javascript" src="/libraries/ngCart/dist/ngCart.js"></script>
 
+  <!-- app.js core  -->
   <script type="text/javascript" src="/app.js"></script>
-  <script type="text/javascript" src="/module/config/raveinstant.client.routes.js"></script>
 
+  <!-- main modules  -->
+  <script type="text/javascript" src="/module/config/raveinstant.client.routes.js"></script>
   <script type="text/javascript" src="/module/controllers/raveinstant.client.main.js"></script>
 
 </html>

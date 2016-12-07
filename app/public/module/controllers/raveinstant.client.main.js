@@ -7,7 +7,6 @@
   mainController.$inject = [ '$scope', '$http', 'ngCart' ];
 
   function mainController( $scope, $http, ngCart){
-      console.log(' in controller ');
 
   }
 

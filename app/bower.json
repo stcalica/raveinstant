@@ -19,6 +19,8 @@
     "angular": "^1.5.9",
     "angular-route": "^1.5.9",
     "bootstrap": "^3.3.7",
-    "ngCart": "ngcart#^1.0.0"
+    "ngCart": "ngcart#^1.0.0",
+    "angular-ui-bootstrap": "^2.3.0",
+    "angular-bootstrap": "^2.3.0"
   }
 }
