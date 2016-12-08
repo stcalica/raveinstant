@@ -10,7 +10,9 @@
 
   function cartController($scope, $http, ngCart){
       console.log('in Cart');
-      ngCart.getItems();
+      var items =  ngCart.getItems();
+      console.log(items); 
+   
   }
 
 })();
