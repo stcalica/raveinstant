@@ -7,15 +7,8 @@
   mainController.$inject = [ '$scope', '$http', 'ngCart' ];
 
   function mainController( $scope, $http, ngCart){
-      console.log('In Controller');
-      $scope.payPalSettings = {
-            'paypal':
-              {
-                'business': 'mjsiiteri@gmail.com'
-              }
-          };
+      console.log('In mainController');
 
-      console.log($scope.payPalSettings);
   }
 
 

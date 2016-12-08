@@ -1,0 +1,29 @@
+<form name="customerForm" ng-submit="toCheckout()">
+
+  <!-- customer information with order information -->
+  <label> First</label>
+  <input type="text" name="first_name" ng-model="vm.first_name" />
+  <label> Last</label>
+  <input type="text" name="last_name" ng-model="vm.last_name" /><br />
+  <label> Phone Number</label>
+  <input type="phonea" name="phone_a" ng-model="vm.phone_a" />
+  <input type="phoneb" name="phone_b" ng-model="vm.phone_b" />
+  <input type="phonec" name="phone_c" ng-model="vm.phone_c" /><br />
+
+  <label> Email</label>
+  <input type="email" name="email" ng-model="vm.email" /><br />
+
+  <label> Address 1</label>
+  <input type="text" name="add_1" ng-model="vm.add_1" />
+  <label> Address 2</label>
+  <input type="text" name="add_2" ng-model="vm.add_1" /><br />
+  <label> City</label>
+  <input type="text" name="city" ng-model="vm.city" /><br />
+  <label> State</label>
+  <input type="text" name="state" ng-model="vm.state" />
+  <label> Zipcode</label>
+  <input type="text" name="zipcode" ng-model="vm.zipcode" /><br />
+
+  <button type="submit">Submit</button>
+
+</form>

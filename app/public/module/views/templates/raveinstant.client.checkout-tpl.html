@@ -1,0 +1,62 @@
+
+
+
+<div ng-if="service=='http' || service == 'log'">
+    <button class="btn btn-primary" ng-click="checkout()" ng-disabled="!ngCart.getTotalItems()" ng-transclude>Checkout</button>
+</div>
+
+
+<div ng-if="service=='paypal'">
+
+    <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top" ng-show="ngCart.getTotalItems()">
+      <!--  <input type="hidden" name="cmd" value="_xclick" /> -->
+
+       <input type="hidden" name="cmd" value="_cart" />
+       <input type="hidden" name="upload" value="{{ settings.cart_quantity }}">
+
+        <input type="hidden" name="business" value="{{ settings.paypal.business }}" />
+        <input type="hidden" name="lc" value="CA" />
+
+      <!-- https://developer.paypal.com/docs/classic/paypal-payments-standard/integration-guide/cart_upload/ -->
+
+
+        <input type="hidden" name="amount" value="{{ ngCart.getSubTotal()}}" />
+        <input type="hidden" name="currency_code" value="US" />
+
+
+        <input ng-repeat="item in settings.cart" type="hidden" name="item_name_{{ $index + 1 }}" value="{{ item.item_name }}" />
+        <input ng-repeat="item in settings.cart" type="hidden" name="amount_{{ $index + 1 }}" value="{{ item.item_price }}" />
+        <input ng-repeat="item in settings.cart" type="hidden" name="quantity_{{ $index + 1 }}" value="{{ item.item_quantity }}" />
+
+
+        <input type="hidden" name="button_subtype" value="services" />
+        <input type="hidden" name="no_note" value="{{ settings.paypal.no_note }}" />
+
+        <input type="hidden" name="tax_rate" value="{{ ngCart.getTaxRate()}}" />
+        <input type="hidden" name="shipping" value="{{ ngCart.getShipping()}}" />
+
+        <input type="hidden" name="bn" value="PP-BuyNowBF:btn_buynowCC_LG.gif:NonHostedGuest" />
+
+        <input type="hidden" name="description" value="test" />
+
+        <input type="hidden" name="return" value="{{ settings.paypal.returnURL }}" />
+
+
+        <input type="hidden" name="first_name" value="{{ settings.form.first_name }}">
+        <input type="hidden" name="last_name" value="{{ settings.form.last_name }}">
+        <input type="hidden" name="address1" value="{{ settings.form.add_1 }}">
+        <input type="hidden" name="address2" value="{{ settings.form.add_2 }}">
+        <input type="hidden" name="city" value="{{ settings.form.city }}">
+        <input type="hidden" name="state" value="{{ settings.form.state }}">
+        <input type="hidden" name="zip" value="{{ settings.form.zip }}">
+        <input type="hidden" name="night_phone_a" value="{{ settings.form.phone_a }}">
+        <input type="hidden" name="night_phone_b" value="{{ settings.form.phone_b }}">
+        <input type="hidden" name="night_phone_c" value="{{ settings.form.phone_c }}">
+        <input type="hidden" name="email" value="{{ settings.form.email }}">
+
+
+        <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_buynowCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!" />
+        <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1" />
+    </form>
+
+</div>
