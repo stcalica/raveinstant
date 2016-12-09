@@ -1,8 +1,7 @@
-body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif; }
+.margin-right-15 {
+  margin-right: 15px; }
 
-a {
-  color: #00B7FF; }
+.announcements {
+  margin-top: 80px; }
 
 /*# sourceMappingURL=style.css.map */

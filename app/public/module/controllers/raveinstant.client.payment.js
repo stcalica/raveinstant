@@ -62,7 +62,6 @@
 
       console.log($scope.payPalSettings.cart);
 
-
       //take in form and fill in payPalSettings as well as update other parts of the form with $rootScrope
 
       //pass into next rootScope and then send all off to paypal

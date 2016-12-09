@@ -2,7 +2,6 @@
 
 	'use strict';
 
-
 	angular.module('raveinstant').config(Config);
 
 	Config.$inject = [ '$routeProvider' ];

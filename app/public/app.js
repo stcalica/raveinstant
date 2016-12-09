@@ -4,7 +4,7 @@
 
 	var dependencies = [ 'ngRoute', 'ngCart', 'ui.bootstrap'];
 
-	angular.module('raveinstant', dependencies).config(Config);
+	angular.module('raveinstant', dependencies).config(Config).run(Run);
 
 	Config.$inject = ['$locationProvider'];
 
@@ -17,12 +17,19 @@
 	}
 
 	//bootstrap angular
-
 	angular.element(document).ready(function(){
 
 		angular.bootstrap(document, ['raveinstant']);
 
 	});
+
+	Run.$inject = [ 'ngCart' ];
+
+	function Run(ngCart){
+		ngCart.empty();
+
+	}
+
 
 
 })();

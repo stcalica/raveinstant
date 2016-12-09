@@ -8,7 +8,6 @@
 
   function mainController( $scope, $http, ngCart){
       console.log('In mainController');
-
   }
 
 
