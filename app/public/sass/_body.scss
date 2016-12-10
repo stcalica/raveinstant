@@ -1,0 +1,55 @@
+body{}
+
+.margin-right-15{
+  margin-right: 15px;
+}
+
+
+.announcements{
+  margin-top: 80px;
+}
+
+.instructions{}
+
+.navbar{}
+
+.product{}
+
+.checkout-btn{}
+
+.cart-summary{
+  width: 10%;
+  height: 100%;
+  float: right;
+  margin-top: auto;
+}
+
+.cart-icon{
+  width:50%;
+  height:100%;
+  float:left;
+}
+
+.item-count{
+  width:50%;
+  float:right;
+}
+
+.total-cost{
+  float:right;
+  width:50%;
+}
+
+
+.half-menu{
+  position: absolute;
+  background-color: white;
+  z-index: 2;
+  height:100%;
+  left:0;
+  width:50%;
+}
+
+.side-items{
+    margin-top:50px;
+}
