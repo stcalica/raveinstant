@@ -2,25 +2,30 @@
   'use strict';
 
   angular.module('raveinstant').controller('navController', navController);
+  navController.$inject = ['$scope', '$location', 'ngCart'];
 
-  navController.$inject = ['$scope', 'ngCart'];
 
   function navController($scope, ngCart){
+    $("#side-menu").hide();
+    $scope.ngCart = ngCart;
+
+    if(window.innerWidth < 1000){
+          $(".cart-summary").hide();
+    }
 
 
-    console.log('navController up!');
-    var open = false;
     $scope.navCollapse = function(){
-      //console.log('before click', open);
-      open = (open == false) ? true : false;
-      //console.log('after click', open);
-      
-      //open up menu
-
-
-
+        $("#side-menu").toggle();
     };
 
-  }
+  $(window).resize(function(){
+    if(window.innerWidth < 1000){
+          $(".cart-summary").hide();
+    }
+  });
+
+
+
+  };
 
 })();
